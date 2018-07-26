@@ -46,7 +46,58 @@ var x = 5
 >Primary - Defined with class name with no logic handling
 >Secondary - They are defined in the class body with logic handling.
 
+* What's init block in kotlin
 
+init is the intialiser block in kotlin. It is executed once.
 
+* val are default type to define variable in constructor. But can be var
 
+* Switch case is replaced with when
 
+```
+when (num) {
+	0..4 -> print("values is 0")
+	5 -> print("value is 5")
+	else -> print("default")
+}
+```
+
+* What are data class in kotlin?
+
+>In java you need to define toString(), hash() and copy() to use them. But in kotlin in these methods come by default in data class.
+
+* What is the difference between inline and infix functions?
+
+>Inline functions are used to save us memory overhead by preventing object allocations for the anonymous functions/lambda expressions called. Instead, it provides that functions body to the function that calls it at runtime. This increases the bytecode size slightly but saves a lot of memory.
+
+>Infix functions on the other are used to call functions without parentheses or brackets. Doing so, the code looks much more like a natural language.
+
+* What's the difference between lazy and lateinit?
+
+lateinit means to initialize value later in code
+
+lazy can be assigned to val but value in lazy is set at runtime
+
+* object can be used to create singleton class
+
+* static variables and method can be defined using companion object
+
+* Array can defined using arrayOf(1,2,3)
+
+* Java vs kotlin
+
+1. kotlin removes boilerplate code
+
+* how do you declare a variable as volatile in kotlin?
+
+>By providing @volatile before variable declaration.
+
+* Ternary conditional operator can be defined using if condition
+
+* There is dependency of secondary constructor on primary constructor.
+
+* How do you think extension functions are useful?
+
+Extension functions helps to extend a class with new functionality without having to inherit from class.
+
+* instanceof in kotlin works like object1 is object2
