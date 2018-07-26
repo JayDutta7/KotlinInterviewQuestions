@@ -87,6 +87,8 @@ lazy can be assigned to val but value in lazy is set at runtime
 * Java vs kotlin
 
 1. kotlin removes boilerplate code
+2. lambda expression just like java 1.8
+3. 40% less coding
 
 * how do you declare a variable as volatile in kotlin?
 
@@ -101,3 +103,16 @@ lazy can be assigned to val but value in lazy is set at runtime
 Extension functions helps to extend a class with new functionality without having to inherit from class.
 
 * instanceof in kotlin works like object1 is object2
+
+* way to define for loop in range
+
+```
+for(i in 1..15){
+}
+```
+
+* kotlin doesn't support primitive datatype
+
+* kotlin can be executed without JVM
+
+https://github.com/siddhpatil6/Kotlin/wiki/Android-Interview-Questions
