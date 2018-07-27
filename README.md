@@ -115,7 +115,10 @@ for(i in 1..15){
 
 * kotlin can be executed without JVM
 
-https://github.com/siddhpatil6/Kotlin/wiki/Android-Interview-Questions
+-----
+#Data Structure
+
+* Array - ?
 
 * Singly Linked List - Each node in linked list contains data and a pointer. A pointer is a reference to the next item in the linked list. A linked list contains both a head and a tail.
 
@@ -262,3 +265,57 @@ class SinglyLinkedList {
         }
     }
 ```
+
+* DoublyLinkedList - A DoublyLinkedList is based on a linkedList, but there is two pointers in each node. Pointer is linked to previous and last. Last Node's next reference is null.
+
+* Stack 
+
+* Queue
+
+* Sets
+
+* Maps
+
+* Hash Tables
+
+* Binary Tree 
+
+* Binary Search tree
+
+* Heap
+
+* Hashing
+
+* Graph
+
+* Matrix
+
+* Advanced Data Structure
+
+-----
+
+#Android
+
+* Difference between activity and Fragment?
+
+An Activity is an component that provides a screen, with which users acn interact in order to do something. 
+
+Whereas a Fragment represents a behaviour or a portion of user interface in an activity
+
+-----
+
+#Java
+
+* What is difference between interfaces and abstract class?
+
+1. An Interface is a contract. 
+2. An interface is an empty shell.
+3. Interface only contains abstract methods.
+4. Contains only final and static variables.
+5. All methods should be public
+6. Interface can extend mutiple interface
+
+--
+
+1. Abstract classes unlike interfaces are classes.
+2. Abstract classes look a lot like interfaces.
