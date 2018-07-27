@@ -116,3 +116,149 @@ for(i in 1..15){
 * kotlin can be executed without JVM
 
 https://github.com/siddhpatil6/Kotlin/wiki/Android-Interview-Questions
+
+* Singly Linked List - Each node in linked list contains data and a pointer. A pointer is a reference to the next item in the linked list. A linked list contains both a head and a tail.
+
+```
+class SinglyLinkedList {
+        Node start;
+        Node end;
+        int size;
+
+        public SinglyLinkedList() {
+            start = null;
+            end = null;
+            size = 0;
+        }
+
+        boolean isEmpty() {
+            return start == null;
+        }
+
+        public int getSize() {
+            return size;
+        }
+
+        public void insertAtStart(int val) {
+            Node nptr = new Node(val, null);
+            size++;
+            if (start == null) {
+                start = nptr;
+                end = start;
+            } else {
+                nptr.setLink(start);
+                start = nptr;
+            }
+        }
+
+        public void insertAtEnd(int val) {
+            Node nptr = new Node(val, null);
+            size++;
+            if (start == null) {
+                start = nptr;
+                end = start;
+            } else {
+                end.setLink(nptr);
+                end = nptr;
+            }
+        }
+
+        public void insertAtPos(int val, int pos) {
+            Node nptr = new Node(val, null);
+            Node ptr = start;
+            pos = pos - 1;
+            for (int i = 1; i < size; i++) {
+                if (i == pos) {
+                    Node tmp = ptr.getLink();
+                    ptr.setLink(nptr);
+                    nptr.setLink(tmp);
+                    break;
+                }
+                ptr = ptr.getLink();
+            }
+            size++;
+        }
+
+        public void deleteAtPos(int pos) {
+            if (pos == 1) {
+                start = start.getLink();
+                size--;
+                return;
+            }
+            if (pos == size) {
+                Node s = start;
+                Node t = start;
+                while (s != end) {
+                    t = s;
+                    s = s.getLink();
+                }
+                end = t;
+                end.setLink(null);
+                size--;
+                return;
+            }
+            Node ptr = start;
+            pos = pos - 1;
+            for (int i = 1; i < size; i++) {
+                if (i == pos) {
+                    Node tmp = ptr.getLink();
+                    tmp = tmp.getLink();
+                    ptr.setLink(tmp);
+                    break;
+                }
+                ptr = ptr.getLink();
+            }
+            size--;
+        }
+
+        public void display() {
+            System.out.println("Singly Linked list:");
+            if (size == 0) {
+                System.out.print("empty");
+                return;
+            }
+            if (start.getLink() == null) {
+                System.out.println(start.getData());
+            }
+            Node ptr = start;
+            System.out.print(start.getData() + "->");
+            ptr = start.getLink();
+            while (ptr.getLink() != null) {
+                System.out.print(ptr.getData() + "->");
+                ptr = ptr.getLink();
+            }
+            System.out.print(ptr.getData() + "\n");
+        }
+    }
+
+    class Node {
+        int data;
+        Node link;
+
+        public Node() {
+            link = null;
+            data = 0;
+        }
+
+        public Node(int d, Node n) {
+            data = d;
+            link = n;
+        }
+
+        public int getData() {
+            return data;
+        }
+
+        public void setData(int data) {
+            this.data = data;
+        }
+
+        public Node getLink() {
+            return link;
+        }
+
+        public void setLink(Node link) {
+            this.link = link;
+        }
+    }
+```
