@@ -1,6 +1,6 @@
 # Kotlin Interview Questions And Answers
 
-* How do you declare variables in kotlin?
+* **How do you declare variables in kotlin?**
 
 ```
 val s: String = "Hi"
@@ -267,6 +267,161 @@ class SinglyLinkedList {
 ```
 
 * DoublyLinkedList - A DoublyLinkedList is based on a linkedList, but there is two pointers in each node. Pointer is linked to previous and last. Last Node's next reference is null.
+
+```
+
+    /**
+     * Class Node
+     */
+    class Node {
+        int data;
+        Node next, prev;
+
+        /**
+         * Constructor
+         */
+        public Node() {
+            next = null;
+            prev = null;
+            data = 0;
+        }
+
+        /**
+         * Constructor
+         *
+         * @param data data
+         * @param next reference to next node
+         * @param prev reference to previous node
+         */
+        public Node(int data, Node next, Node prev) {
+            this.data = data;
+            this.next = next;
+            this.prev = prev;
+        }
+
+        public int getData() {
+            return data;
+        }
+
+        public void setData(int data) {
+            this.data = data;
+        }
+
+        public Node getNext() {
+            return next;
+        }
+
+        public void setNext(Node next) {
+            this.next = next;
+        }
+
+        public Node getPrev() {
+            return prev;
+        }
+
+        public void setPrev(Node prev) {
+            this.prev = prev;
+        }
+    }
+
+    class DoublyLinkedList {
+        Node start;
+        Node end;
+        int size;
+
+        public DoublyLinkedList() {
+            start = null;
+            end = null;
+            size = 0;
+        }
+
+        boolean isEmpty() {
+            return start == null;
+        }
+
+        public int getSize() {
+            return size;
+        }
+
+        public void insertAtStart(int val) {
+            Node nptr = new Node(val, null, null);
+            if (start == null) {
+                start = nptr;
+                end = start;
+            } else {
+                start.setPrev(nptr);
+                nptr.setNext(start);
+                start = nptr;
+            }
+            size++;
+        }
+
+        public void insertAtEnd(int val) {
+            Node nptr = new Node(val, null, null);
+            if (start == null) {
+                start = nptr;
+                end = start;
+            } else {
+                nptr.setPrev(end);
+                end.setNext(nptr);
+                end = nptr;
+            }
+            size++;
+        }
+
+        public void insertAtPos(int val, int pos) {
+            Node nptr = new Node(val, null, null);
+            if (pos == 1) {
+                insertAtEnd(val);
+                return;
+            }
+            Node ptr = start;
+            for (int i = 2; i <= size; i++) {
+                if (i == pos) {
+                    Node tmp = ptr.getNext();
+                    ptr.setNext(nptr);
+                    nptr.setPrev(ptr);
+                    nptr.setNext(tmp);
+                    tmp.setPrev(nptr);
+                }
+                ptr = ptr.getNext();
+            }
+            size++;
+        }
+
+        public void deleteAtPos(int pos) {
+            if (pos == 1) {
+                if (size == 1) {
+                    start = null;
+                    end = null;
+                    size = 0;
+                    return;
+                }
+                start = start.getNext();
+                start.setPrev(null);
+                size--;
+                return;
+            }
+            if (pos == size) {
+                end = end.getPrev();
+                end.setNext(null);
+                size--;
+            }
+            Node ptr = start.getNext();
+            for (int i = 2; i <= size; i++) {
+                if (i == pos) {
+                    Node p = ptr.getPrev();
+                    Node n = ptr.getNext();
+                    p.setNext(n);
+                    n.setPrev(p);
+                    size--;
+                    return;
+                }
+                ptr = ptr.getNext();
+            }
+        }
+    }
+```
 
 * Stack 
 
