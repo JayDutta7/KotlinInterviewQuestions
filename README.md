@@ -1,5 +1,7 @@
 # Android Interview Questions And Answers
 
+# Kotlin
+
 * **How do you declare variables in kotlin?**
 
 ```
