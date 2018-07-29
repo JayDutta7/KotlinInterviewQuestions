@@ -9,50 +9,50 @@ var x = 5
 
 >var and val automatically detect the type using type inference.
 
-* What's the difference between val and car declaration? How to convert a String to an Int? val variables cannot be changed. They're like final.
+* **What's the difference between val and car declaration? How to convert a String to an Int? val variables cannot be changed. They're like final.**
 
 >Answer: var can be reassigned. But on next reassignment value should be of same data type.
 
 >To convert string ot int use toInt() after string.
 
-* What's null safety and nullable types in kotlin? What is the elvis operator?
+* **What's null safety and nullable types in kotlin? What is the elvis operator?**
 
 >Kotlin puts a lot of weight behind null safety which is an approach to prevent the dreaded Null Pointer exception by using nullable types which are like String?.
 
-* What's a const? How does it differ from a val?
+* **What's a const? How does it differ from a val?**
 
 >By default val properties are set at runtime. Adding a const modifier on a val would make a compile-time constant.
 
-* Does kotlin allow us to use primitive types such as int, float, double?
+* **Does kotlin allow us to use primitive types such as int, float, double?**
 
 >At the language level, we cannot use the above-mentioned types. But the JVM bytecode that's compiled does certainly have them.
 
-* How is !! differeent from ?.
+* **How is !! differeent from ?.**
 
 >!! is used to force unwrap the nullable type to ge the value. If the value returned is a null, it would lead to runtime crash.
 
-* What's the difference betweem == and === operators in kotlin?
+* **What's the difference betweem == and === operators in kotlin?**
 
 >== is used to compare the values are equal or not. === is used to check if the references are equal or not.
 
-* access modifiers are same
+* **Access modifiers are same**
 
-* Extend class using : after class name
+* **Extend class using : after class name**
 
-* By default classes are final in kotlin. To make them non-final use open modifier
+* **By default classes are final in kotlin. To make them non-final use open modifier**
 
-* What are the types of constructors in kotlin?
+* **What are the types of constructors in kotlin?**
 
 >Primary - Defined with class name with no logic handling
 >Secondary - They are defined in the class body with logic handling.
 
-* What's init block in kotlin
+* **What's init block in kotlin?**
 
 init is the intialiser block in kotlin. It is executed once.
 
-* val are default type to define variable in constructor. But can be var
+* **val are default type to define variable in constructor. But can be var**
 
-* Switch case is replaced with when
+* **Switch case is replaced with when**
 
 ```
 when (num) {
@@ -62,65 +62,65 @@ when (num) {
 }
 ```
 
-* What are data class in kotlin?
+* **What are data class in kotlin?**
 
 >In java you need to define toString(), hash() and copy() to use them. But in kotlin in these methods come by default in data class.
 
-* What is the difference between inline and infix functions?
+* **What is the difference between inline and infix functions?**
 
 >Inline functions are used to save us memory overhead by preventing object allocations for the anonymous functions/lambda expressions called. Instead, it provides that functions body to the function that calls it at runtime. This increases the bytecode size slightly but saves a lot of memory.
 
 >Infix functions on the other are used to call functions without parentheses or brackets. Doing so, the code looks much more like a natural language.
 
-* What's the difference between lazy and lateinit?
+* **What's the difference between lazy and lateinit?**
 
 lateinit means to initialize value later in code
 
 lazy can be assigned to val but value in lazy is set at runtime
 
-* object can be used to create singleton class
+* **object can be used to create singleton class**
 
-* static variables and method can be defined using companion object
+* **static variables and method can be defined using companion object**
 
-* Array can defined using arrayOf(1,2,3)
+* **Array can defined using arrayOf(1,2,3)**
 
-* Java vs kotlin
+* **Java vs kotlin**
 
 1. kotlin removes boilerplate code
 2. lambda expression just like java 1.8
 3. 40% less coding
 
-* how do you declare a variable as volatile in kotlin?
+* **How do you declare a variable as volatile in kotlin?**
 
 >By providing @volatile before variable declaration.
 
-* Ternary conditional operator can be defined using if condition
+* **Ternary conditional operator can be defined using if condition**
 
-* There is dependency of secondary constructor on primary constructor.
+* **There is dependency of secondary constructor on primary constructor.**
 
-* How do you think extension functions are useful?
+* **How do you think extension functions are useful?**
 
-Extension functions helps to extend a class with new functionality without having to inherit from class.
+>Extension functions helps to extend a class with new functionality without having to inherit from class.
 
-* instanceof in kotlin works like object1 is object2
+* **instanceof in kotlin works like object1 is object2**
 
-* way to define for loop in range
+* **way to define for loop in range**
 
 ```
 for(i in 1..15){
 }
 ```
 
-* kotlin doesn't support primitive datatype
+* **kotlin doesn't support primitive datatype**
 
-* kotlin can be executed without JVM
+* **kotlin can be executed without JVM**
 
 -----
 #Data Structure
 
-* Array - ?
+* **Array - ?**
 
-* Singly Linked List - Each node in linked list contains data and a pointer. A pointer is a reference to the next item in the linked list. A linked list contains both a head and a tail.
+* **Singly Linked List** - Each node in linked list contains data and a pointer. A pointer is a reference to the next item in the linked list. A linked list contains both a head and a tail.
 
 ```
 class SinglyLinkedList {
@@ -266,10 +266,9 @@ class SinglyLinkedList {
     }
 ```
 
-* DoublyLinkedList - A DoublyLinkedList is based on a linkedList, but there is two pointers in each node. Pointer is linked to previous and last. Last Node's next reference is null.
+* **DoublyLinkedList** - A DoublyLinkedList is based on a linkedList, but there is two pointers in each node. Pointer is linked to previous and last. Last Node's next reference is null.
 
 ```
-
     /**
      * Class Node
      */
@@ -423,29 +422,189 @@ class SinglyLinkedList {
     }
 ```
 
-* Stack 
+* **Maps**
 
-* Queue
+>A map represents a data structure in which collections of unique key and collections of values are stored where each key is associated with one value.
 
-* Sets
+```
+public class MyEntry<K, V> {
+        private final K key;
+        private V value;
 
-* Maps
+        public MyEntry(K key, V value) {
+            this.key = key;
+            this.value = value;
+        }
 
-* Hash Tables
+        public K getKey() {
+            return key;
+        }
 
-* Binary Tree 
+        public V getValue() {
+            return value;
+        }
 
-* Binary Search tree
+        public void setValue(V value) {
+            this.value = value;
+        }
+    }
 
-* Heap
+    public class MyMap<K, V> {
+        private int size;
+        private int DEFAULT_CAPACITY = 16;
+        private MyEntry<K, V>[] values = new MyEntry[DEFAULT_CAPACITY];
 
-* Hashing
+        private V get(K key) {
+            for (int i = 0; i < size; i++) {
+                if (values[i] != null) {
+                    if (values[i].getKey().equals(key)) {
+                        return values[i].getValue();
+                    }
+                }
+            }
+            return null;
+        }
 
-* Graph
+        public void put(K key, V value) {
+            boolean insert = true;
+            for (int i = 0; i < size; i++) {
+                if (value[i].getKey().equals(key)) {
+                    values[i].setValue(value);
+                    insert = false;
+                }
+            }
+            if (insert) {
+                ensureCapa();
+                values[size++] = new Entry<K, V>(key, value);
+            }
+        }
 
-* Matrix
+        private void ensureCapa() {
+            if (size == values.length) {
+                int newSize = values.length * 2;
+                values = Arrays.copyOf(values, newSize);
+            }
+        }
 
-* Advanced Data Structure
+        public int size() {
+            return size;
+        }
+
+        public void remove(K key) {
+            for (int i = 0; i < size; i++) {
+                if (values[i].getKey().equals(key)) {
+                    values[i] = null;
+                    size--;
+                    condenseArray(i);
+                }
+            }
+        }
+
+        private void condenseArray(int start) {
+            for (int i = start; i < size; i++) {
+                values[i] = values[i + 1];
+            }
+        }
+
+        public Set<K> getSet() {
+            Set<K> set = new HashSet<K>();
+            for (int i = 0; i < size; i++) {
+                set.add(values[i].getKey());
+            }
+            return set;
+        }
+    }
+```
+
+* **List**
+
+* **Stack**
+
+```
+ class ArrayStack {
+        protected int arr[];
+        protected int top, size, len;
+
+        public ArrayStack(int n) {
+            size = n;
+            len = 0;
+            arr = new int[size];
+            top = -1;
+        }
+
+        public boolean isEmpty() {
+            return top == -1;
+        }
+
+        public boolean isFull() {
+            return top == size - 1;
+        }
+
+        public int getSize() {
+            return len;
+        }
+
+        public int peek() {
+            if (isEmpty()) {
+                throw new NoSuchElementException("Underflow Exception");
+            }
+            return arr[top];
+        }
+
+        public void push(int i) {
+            if (top + 1 >= size) {
+                throw new IndexOutOfBoundsException("Overflow Exception");
+            }
+            if (top + 1 < size) {
+                arr[++top] = i;
+            }
+            len++;
+        }
+
+        public int pop() {
+            if (isEmpty()) {
+                throw new NoSuchElementException("Underflow exception");
+            }
+            len--;
+            return arr[top--];
+        }
+
+        public void display() {
+            if (len == 0) {
+                System.out.print("Empty");
+                return;
+            }
+            for (int i = top; i >= 0; i--) {
+                System.out.print(arr[i] + " ");
+            }
+            System.out.println();
+        }
+    }
+```
+
+* **Set**
+
+* **HashSet**
+
+* **Queue**
+
+* **Sets**
+
+* **Hash Tables**
+
+* **Binary Tree** 
+
+* **Binary Search tree**
+
+* **Heap**
+
+* **Hashing**
+
+* **Graph**
+
+* **Matrix**
+
+* **Advanced Data Structure**
 
 -----
 
