@@ -1,4 +1,4 @@
-# Kotlin Interview Questions And Answers
+# Android Interview Questions And Answers
 
 * **How do you declare variables in kotlin?**
 
@@ -608,9 +608,9 @@ public class MyEntry<K, V> {
 
 -----
 
-#Android
+# Android
 
-* Difference between activity and Fragment?
+* **Difference between activity and Fragment?**
 
 An Activity is an component that provides a screen, with which users acn interact in order to do something. 
 
@@ -618,9 +618,9 @@ Whereas a Fragment represents a behaviour or a portion of user interface in an a
 
 -----
 
-#Java
+# Java
 
-* What is difference between interfaces and abstract class?
+* **What is difference between interfaces and abstract class?**
 
 1. An Interface is a contract. 
 2. An interface is an empty shell.
