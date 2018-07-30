@@ -636,6 +636,10 @@ Whereas a Fragment represents a behaviour or a portion of user interface in an a
 
 * **Glide**
 
+* **Load image on scroll**
+
+* **Dependency injection**
+
 -----
 
 # Java
