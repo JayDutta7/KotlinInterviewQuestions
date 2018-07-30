@@ -188,7 +188,7 @@ Whereas a Fragment represents a behaviour or a portion of user interface in an a
 
 * **OkHttp**
 
-* **Fast Networking Call**
+* **Fast Android Networking**
 
 * **Caching**
 
