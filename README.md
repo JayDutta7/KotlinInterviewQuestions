@@ -166,6 +166,18 @@ https://github.com/sourabhrustagi/Stack
 
 * **Advanced Data Structure**
 
+* **Bubble Sort**
+
+* **Quick Sort**
+
+* **Selection Sort**
+
+* **Insertion Sort**
+
+* **Merge Sort**
+
+* **String manipulation**
+
 -----
 
 # Android
@@ -198,6 +210,95 @@ Whereas a Fragment represents a behaviour or a portion of user interface in an a
 
 * **Dependency injection**
 
+* **RxJava**
+
+* **MVVM**
+
+* **NDK**
+
+* **Flags in android**
+
+* **Flutter**
+
+* **Doing task after sleep**
+
+* **Leak Canary**
+
+* **Android Architecture Components**
+
+* **React Native**
+
+* **Phone Gap**
+
+* **Zamarin**
+
+* **Accessibility**
+
+* **Deep Linking**
+
+* **Slice**
+
+* **Difference between implementation and compile**
+
+* **Fingerprint dialog**
+
+* **HTTPS and SSL**
+
+* **Image and video compression**
+
+* **Instant Apps**
+
+* **Job Scheduler**
+
+* **Live Streaming**
+
+* **Memory Profiling**
+
+* **Opening application from web**
+
+* **Pending Intent**
+
+* **SOAP Api**
+
+* **Socket Connection**
+
+* **Transition**
+
+* **Android JetPack**
+
+* **Android Arsenal**
+
+* **Enterprise Application**
+
+* **RxAndroid**
+
+* **Google play merchant**
+
+* **Paytm**
+
+* **Paypal**
+
+* **Payubiz**
+
+-----
+
+# Tools
+
+* Jenkins
+* Hockey
+* Invision
+* Kanban
+* Postman
+* Genymotion
+* Sonar
+* Charles proxy
+* Stetho
+* Agile
+* Git
+* Svn
+* Source Tree
+* Ionic
+
 -----
 
 # Java
@@ -215,3 +316,29 @@ Whereas a Fragment represents a behaviour or a portion of user interface in an a
 
 1. Abstract classes unlike interfaces are classes.
 2. Abstract classes look a lot like interfaces.
+
+* **Oops**
+
+* **Inheritance**
+
+* **Composition over inheritance**
+
+* **Overloading vs Overriding**
+
+* **Polymorphism**
+
+-----
+
+# Design Pattern
+
+* **Builder Pattern**
+
+* **Factory Pattern**
+
+* **SingleTon Pattern**
+
+* **Adapter Pattern**
+
+* **Decorator Pattern**
+
+* **Facade Pattern**
